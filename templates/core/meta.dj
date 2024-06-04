@@ -1,0 +1,28 @@
+{% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=+233206492361">
+    <meta name="theme-color" content="#75dab4"/>
+    <meta name="author" content="projectcaregh">
+    <meta name="description" content="Download complete project topics and research materials. Free project topics ideas, Latest Project Topics and Research Materials. For List of Project Topics Call +233206492361.">
+    <meta name="keywords" content="projectcare, projectcaregh, project topics, project topic, project material, project materials, projects, topics, materials, Project topics, project ideas, download project topics, complete project topics, research materials, free project topics, final year projects, how to write a project">
+
+    <meta property="og:description" content="Download complete project topics and research materials. Free project topics ideas, Latest Project Topics and Research Materials. For List of Project Topics Call +233206492361.">
+    <meta property="og:image" content="{% static 'core/images/preview.jpg' %}">
+    <meta property="og:site_name" content="projectcaregh">
+    <meta property="og:title" content="projectcaregh">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.projectcaregh.com/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@projectcaregh">
+    <meta name="twitter:creator" content="@projectcaregh">
+    <meta name="twitter:title" content="projectcaregh">
+    <meta name="twitter:description" content="Download complete project topics and research materials. Free project topics ideas, Latest Project Topics and Research Materials. For List of Project Topics Call +233201852903.">
+    <meta name="twitter:image" content="{% static 'core/images/preview.jpg' %}">
+
+    <link href="{% static 'core/ico/apple-touch-icon-144-precomposed.png' %}" rel="apple-touch-icon" sizes="144x144">
+    <link href="{% static 'core/ico/apple-touch-icon-114-precomposed.png' %}" rel="apple-touch-icon" sizes="114x114">
+    <link href="{% static 'core/ico/apple-touch-icon-72-precomposed.png' %}" rel="apple-touch-icon" sizes="72x72">
+    <link href="{% static 'core/ico/apple-touch-icon-57-precomposed.png' %}" rel="apple-touch-icon">
+    <link href="{% static 'core/images/site-logo.png' %}" rel="shortcut icon">

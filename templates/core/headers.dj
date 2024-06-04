@@ -1,0 +1,89 @@
+{% load static %}
+<header>
+	{% if page == 'home' %}
+	<div class="page-header min-vh-75" 
+		style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80');"
+		loading="lazy">
+		<span class="mask bg-gradient-dark opacity-5"></span>
+		<div class="container my-7">
+			<div class="row">
+				<div class="col-lg-7 col-md-7 d-flex justify-content-center flex-column">
+					<h1 class="text-white mb-4">We care about your <span id="typewriter">project topics.</span></h1>
+					<p class="text-white opacity-8 lead pe-5 me-5">
+						Download comprehensive <strong>project topics</strong> and <strong>research materials</strong>
+						for all fields of study and level of education.
+					</p>
+					<div class="buttons">
+						<a href="{% url 'projects' department='accounting' %}" type="button" class="btn bg-gradient-primary mt-4">
+							Browse Projects
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% elif page == 'contact-us' %}
+	<section class="position-relative">
+		<div class="page-header min-vh-50" style="background-image: url('/static/core/images/contact-bg.jpg');" loading="lazy">
+			<span class="mask bg-gradient-primary"></span>
+			<div class="container">
+				<div class="row justify-content-center py-7">
+					<div class="col-lg-6 text-center mx-auto">
+						<h2 class="text-white mb-3">How can we help you?</h2>
+						<p class="lead text-white mb-6">We always want to hear from you! Let us know if there is anything
+							that we can help you with.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% elif page == 'hire-writer' %}
+	<section class="position-relative">
+		<div class="page-header min-vh-50" style="background-image: url('/static/core/images/hire-bg.jpg');" loading="lazy">
+			<span class="mask bg-gradient-primary"></span>
+			<div class="container">
+				<div class="row justify-content-center py-7">
+					<div class="col-lg-6 text-center mx-auto">
+						<h2 class="text-white mb-3">Writers Available</h2>
+						<p class="lead text-white mb-6">We have professional writers for your project. Kindly fill the form below and we'll get you one for sure!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% elif page == 'projects' %}
+	<div class="page-header min-vh-75 my-5">
+		<div>
+			<img class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0"
+				src="https://source.unsplash.com/ozuPQ4HRJSk/1000x1000"
+				alt="image" 
+				loading="lazy"
+			>
+		</div>
+		<div class="container my-3">
+			<div class="row">
+				<div class="col-lg-7 d-flex">
+					<div class="card card-body blur text-md-start text-center px-sm-5 shadow-lg mt-sm-5 py-sm-5">
+						<h2 class="text-dark mb-0">Project Topics & Materials.</h2>
+						<h2 class="text-dark mb-4">Find what you need</h2>
+						<p class="lead text-dark pe-md-5 me-md-5">We provide educational services such as Project Writing, Research Analysis, Term Paper, Thesis Writing, Proposal, Dissertation, Journal, Assignment, etc for various departments.</p>
+						<form action="{% url 'search' %}" method="GET">
+							<div class="row">
+								<div class="col-sm-12 col-lg-8 mt-3">
+									<div class="input-group input-group-outline">
+										<label class="form-label ">Search projects..</label>
+										<input name="q" type="text" class="form-control" />
+									</div>
+								</div>
+								<div class="col-sm-12 col-lg-3 text-end text-lg-start mt-3">
+									<button type="submit" class="btn bg-gradient-primary">search</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+</header>

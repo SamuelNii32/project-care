@@ -1,0 +1,40 @@
+{% if messages %}
+{% for message in messages %}
+
+<div
+  aria-live="polite"
+  aria-atomic="true"
+  id="toastContaner"
+  class="shadow m-3 my-5 d-flex align-self-lg-end align-items-lg-end justify-content-lg-start aligns-items-center justify-content-center w-100 my-auto" 
+  style="position: fixed; z-index: 999;  bottom: 0;
+  left: 0;"
+>
+    <div
+        class="toast mb-5 bg-gradient-dark fade show p-3 py-3 shadow-lg align-self-cente"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+    >
+        <div class="toast-header border-0 bg-transparent">
+        <i class="material-icons me-2 text-white">description</i>
+        <span class="me-auto font-weight-bold text-white">ProjectCare</span>
+        <small class="text-white">Notification</small>
+        <i
+            class="fas fa-times text-md ms-3 cursor-pointer text-white"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+        ></i>
+        </div>
+        <hr class="horizontal light m-0" />
+        <div class="toast-body text-white display-6">
+            <p style="font-size: 14px">{{ message }}</p>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+{% endfor %}
+{% endif %}
+
+

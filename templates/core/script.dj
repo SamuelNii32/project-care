@@ -1,0 +1,15 @@
+{% load static %}
+    <script src="{% static 'core/js/plugins/perfect-scrollbar.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/countUp.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/choices.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/prism.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/highlight.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/rellax.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/tilt.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/choices.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/parallax.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/kit.fontawesome.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/plugins/tinyTypewriter.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/github.buttons.js' %}" type="text/javascript" ></script>
+    <script src="{% static 'core/js/material-kit.min.js' %}?v=3.0.2" type="text/javascript"></script>

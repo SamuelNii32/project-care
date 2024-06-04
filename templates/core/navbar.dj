@@ -1,0 +1,56 @@
+{% load static %}
+{% if page == 'terms' or page == 'projects' %}
+<nav class="navbar navbar-expand-lg top-0 z-index-3 w-100 {{ navbar_bg }}">
+{% else %}
+<nav class="navbar navbar-expand-lg top-0 z-index-3 w-100 fixed-top {{ navbar_bg }}">
+{% endif %}
+    <div class="container">
+      <a class="navbar-brand {{ text_color }} fw-bold" href="{% url 'home' %}" data-placement="bottom">
+        <img src="{% static 'core/images/site-logo.png' %}" class="m-0 p-0 mb-2" style="width: 24px; height: 24px;"><span style="margin-left: -2px;">rojectCare</span>
+      </a>
+      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-4" id="navigation">
+        <ul class="navbar-nav navbar-nav-hover ms-auto">
+            <li class="nav-item mx-2 ms-lg-6">
+                <a href="{% url 'contact-us' %}" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                    Contact Us
+                </a>
+            </li>
+            <li class="nav-item mx-2">
+                <a href="{% url 'hire-writer' %}" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                    Hire a Writer
+                </a>
+            </li>
+            <li class="nav-item mx-2">
+                <a href="{% url 'faq' %}" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                    Faq
+                </a>
+            </li>
+            <li class="nav-item ms-lg-auto">
+                <a class="nav-link nav-link-icon me-2" href="">
+                    <i class="fab fa-facebook me-1"></i>
+                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Like us on Facebook">Facebook</p>
+                </a>
+            </li>
+            <li class="nav-item my-auto ms-3 ms-lg-0">
+                {% if page == 'projects' %}
+                <form action="{% url 'search' %}" method="GET">
+                    <div class="input-group input-group-outline">
+                        <label class="form-label ">Search projects..</label>
+                        <input name="q" type="text" class="form-control" />
+                    </div>
+                </form>
+                {% else %}
+                <a href="{% url 'projects' department='accounting' %}?page=1" class="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0">Projects</a>
+                {% endif %}
+            </li>
+        </ul>
+      </div>
+    </div>
+</nav>

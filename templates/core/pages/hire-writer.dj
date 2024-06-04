@@ -1,0 +1,142 @@
+{% extends 'core/base.dj' %}
+{% load static %}
+
+{% block page_title %}
+    <title>Project Care | Complete Project Topics and Materials for Final Year Students</title>
+{% endblock %}
+
+{% block page_navbar %}{% include 'core/navbar.dj' with text_color='text-white' navbar_bg='navbar-transparent shadow-none' btn_bg='bg-white' %}{% endblock %}
+{% block page_content %}
+<div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6 mb-4">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-4 position-relative ms-lg-auto">
+                <div class="p-3 text-center border-right-after">
+                    <i class="material-icons text-gradient text-primary text-5xl mb-3">email</i>
+                    <h6 class="mb-0">Email</h6>
+                    <p class="text-dark font-weight-normal"><a href="mailto:support@projectcaregh.com">support@projectcaregh.com</a></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 position-relative">
+                <div class="p-3 text-center border-right-after">
+                    <i class="material-icons text-gradient text-primary text-5xl mb-3">call</i>
+                    <h6 class="mb-0">Phone</h6>
+                    <p class="text-dark font-weight-normal"><a href="https://wa.me/233593269229">+233(59) 326 9229</a></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 me-lg-auto">
+                <div class="p-3 text-center">
+                    <i class="material-icons text-gradient text-primary text-5xl mb-3">contacts</i>
+                    <h6 class="mb-0">Contact</h6>
+                    <p class="text-dark font-weight-normal">Support Team</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="py-md-7 py-5">
+        <div class="">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-10 mx-auto text-center">
+                    <div class="mb-md-5">
+                        <h3>Hire a Writer</h3>
+                        <p>Please provide us with the neccessary infomation about the hiring to help us process your request.<br> You can also email us on <a href="mailto:support@projectcaregh.com">support@projectcaregh.com</a>
+                        or WhatsApp us on <a href="https://wa.me/233593269229">+233(59) 326 9229</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card card-plain">
+                        <form id="contact-form" method="post" autocomplete="off" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Full Name</label>
+                                            <input name="fullname" type="text" class="form-control" placeholder="Full Name">
+                                            <span class="input-group-text"><i class="material-icons">person</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ps-md-2">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Email</label>
+                                            <input name="email" type="email" class="form-control" placeholder="Email">
+                                            <span class="input-group-text"><i class="material-icons">email</i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Phone</label>
+                                            <input name="phone" type="text" class="form-control" placeholder="Phone Number">
+                                            <span class="input-group-text"><i class="material-icons">phone</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ps-md-2">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Project Title</label>
+                                            <input name="projectTitle" type="text" class="form-control" placeholder="Project Title">
+                                            <span class="input-group-text"><i class="material-icons">description</i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Education Level</label>
+                                            <select name="educationLevel" class="form-select form-control" aria-label="Default select example">
+                                                <option value="BSC" selected>BSC</option>
+                                                <option value="HND">HND</option>
+                                                <option value="OND/NCE">OND/NCE</option>
+                                                <option value="PGD/MBA/MSc">PGD/MBA/MSc</option>
+                                            </select>
+                                            <span class="input-group-text"><i class="material-icons">school</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ps-md-2">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Department/Project Format (If ANY)</label>
+                                            <input name="department" type="text" class="form-control" placeholder="Department/Project Format">
+                                            <span class="input-group-text"><i class="material-icons">book</i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn bg-gradient-primary mt-4">Submit Request</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+{% block page_footer %}{% include 'core/footer.dj' %}{% endblock %}
+{% block page_js %}
+<script>
+    $(document).ready(function(){
+        $(window).on("scroll",function(){
+            var scroll = $(window).scrollTop();
+            
+            if (scroll > 50) {
+                $('nav').removeClass('navbar-transparent shadow-none');
+                $('.navbar-brand').removeClass('text-white')
+                $('nav').addClass('navbar-light bg-white shadow-lg');
+                $('.navbar-brand').addClass('text-dark')
+    
+            } else{
+                $('nav').removeClass('navbar-light bg-white shadow-lg');
+                $('.navbar-brand').removeClass('text-dark')
+                $('nav').addClass('navbar-transparent shadow-none');
+                $('.navbar-brand').addClass('text-white')
+            }
+        });
+    });
+</script>
+{% endblock %}

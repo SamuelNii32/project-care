@@ -1,0 +1,33 @@
+{% comment %} <div class="col-md-6 col-lg-3 mb-4">
+    <a href="{% url 'projects' %}?category={{ name }}">
+        <div class="card card-background shadow-lg">
+            <div class="full-background" style="background-image: url(https://source.unsplash.com/{{ image_id }}/400x400/)"></div>
+            <div class="card-body">
+                <div class="card-title">
+                    <p class=" display-5 text-light text-end fw-bold">{{ category_projects }}</p>
+                </div>
+                <div class="pt-9">
+                    <h4 class="text-white font-weight-normal">{{ name }}</h4>
+                    <p>{{ description }}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div> {% endcomment %}
+
+{% load project_extras %}
+
+<a href="{% url 'projects' department=department.name|format_path %}?page=1">
+    <div class="card card-background shadow-lg">
+        <div class="full-background" style="background-image: url(https://source.unsplash.com/{{ department.image_id }}/400x400/)"></div>
+        <div class="card-body">
+            <div class="card-title">
+                <p class=" display-5 text-light text-end fw-bold">{{ count }}</p>
+            </div>
+            <div class="pt-9 text-start">
+                <h4 class="text-white font-weight-normal">{{ department.name.title }}</h4>
+                <p>{{ department.name.capitalize }} project topics and materials</p>
+            </div>
+        </div>
+    </div>
+</a>

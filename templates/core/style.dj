@@ -1,0 +1,15 @@
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+
+    <link href="{% static 'core/css/nucleo-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'core/css/nucleo-svg.css' %}" rel="stylesheet" />
+    <link href="{% static 'core/css/fontawesome.min.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+
+    <link id="pagestyle" href="{% static 'core/css/material-kit.min.css' %}" rel="stylesheet" />
+
+    <style>
+        .category-card:hover {
+            transform: scale(1.025);
+        }
+    </style>
